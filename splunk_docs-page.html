@@ -138,13 +138,42 @@
 				     <section class="docs-section" id="item-2-1">
 						<h2 class="section-heading">Create a VM on Google cloud</h2>
 						<p>You can use any cloud, docker to create a VM machine: <br><br>Login into google cloud console using your Gmail account <br><br>In the search box “ VM machine” => create instance => Type the Name of the VM machine => choose Region </p>
-<a href="assets/images/features/appify-theme-projects-overview-lg.jpg" data-title="Create Insance" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/create_instance.png" alt="" style="width: 600px;"></a>
+<a href="assets/images/create_instance.png" data-title="Create Insance" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/create_instance.png" alt="" style="width: 600px;"></a><br>
+<p>Choose the Operating System you want by “change” button => Allow HTTP traffic => Create</p>
+<a href="assets/images/allow_http.png" data-title="Allow HTTP" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/allow_http.png" alt="" style="width: 600px;"></a><br>
+<p>Confirm VM machine is ready to use(Green tick mark) and note down the External IP address<br>
+Click SSH button to login into the server:</P>
+
+<a href="assets/images/external_ip.png" data-title="Allow HTTP" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/external_ip.png" alt="" style="width: 600px;"></a><br>
 
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-2-2">
-						<h2 class="section-heading">Section Item 2.2</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<h2 class="section-heading">Inst,brall Splunk full stack</h2>
+						<p>1. Login into root account:<br>
+sudo su <br>
+2. Download the splunk (you can download splunk depending upon the OS and splunk version) in tar, deb or gz format: Refer splunk website<br><br>
+</p>
+
+<a href="assets/images/download_splunk.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/download_splunk.png" alt="" st.yle="width: 600px;"></a><br>
+<p>3. Install the splunk using <br>
+	dpkg -i <splunk-7.3.4.2-cb574b3d103e-linux-2.6-amd64.deb><br><br>
+</p>
+<a href="assets/images/install_splunk.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/install_splunk.png" alt="" style="width: 600px;"></a><br>
+<p>
+4. Start the splunk demon<br>
+	/opt/splunk/bin/splunk start --accept-license<br>
+	username:admin<br>
+	password:<any_password><br><br>
+
+</p>
+<a href="assets/images/start_daemon.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/start_daemon.png" alt="" style="width: 600px;"></a><br>
+<p>
+5.	Make sure you can able to access the Splunk web URLusing the external IP address<br>
+	http://<extenalIP>:8000<br>
+	username:admin<br>
+	password:<password_while_install><br>
+</p>
 					</section><!--//section-->
 					
 					<section class="docs-section" id="item-2-3">
