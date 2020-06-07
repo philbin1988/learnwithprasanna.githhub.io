@@ -217,7 +217,26 @@ Once machine image create, it will display under machine image.
 					</section><!--//section-->
 					
 
+					<section class="docs-section" id="item-3-2">
+						<h2 class="section-heading">Configure the Search head</h2>
+						<p>Init the members<br>Init the search head member to group a cluster<br></p>
 
+<a href="assets/images/head_member.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/head_member.png" alt="" st.yle="width: 600px;"></a><br>
+<p>Update the password in search head: <br>Update the password in the $SPLUNK_HOME/etc/system/local/server.conf else you will get the below error:<br>
+Error while deploying apps to first member: <br>ConfDeploymentException: Error while fetching apps baseline on target=http://<cluster_captain>:8089: <b>Network-layer error: Connection reset by peer</b>
+<i>/opt/splunk/bin/splunk start </i><br>
+</p>
+<a href="assets/images/splunk_restart.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/splunk_restart.png" alt="" style="width: 600px;"></a><br>
+<p>
+Choose the caption<br>
+<i>#/opt/splunk/bin/splunk bootstrap shcluster-captain -servers_list "https://35.239.106.78:8089,https://35.202.13.236:8089,https://34.71.182.190:8089" -auth admin:password <br>
+#$SPLUNK_HOME/bin/splunk show shcluster-status</i>
+
+
+</p>
+<a href="assets/images/caption.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/caption.png" alt="" style="width: 600px;"></a><br>
+
+					</section><!--//section-->
 
 
   
