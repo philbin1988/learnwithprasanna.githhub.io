@@ -256,6 +256,35 @@ Choose the caption<br>
 <a href="assets/images/search_peer.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/search_peer.png" alt="" style="width: 600px;"></a><br>
 					</section><!--//section-->
    </article><!--//docs-article-->
+
+			
+					<section class="docs-section" id="item-3-5">
+						<h2 class="section-heading">Forward search head monitor data/log into indexe</h2>
+						<p>We have to stop locally indexing the search head data and forward to indexer<br><br>Modify the $SPLUNK_HOME/etc/system/local/output.conf<br>
+<i>
+outputs.conf<br>
+In all the search head<br>
+# Turn off indexing on the master<br>
+[indexAndForward]<br>
+index = false<br><br>
+ 
+[tcpout]<br>
+defaultGroup = indexer_nodes <br>
+forwardedindex.filter.disable = true  <br>
+indexAndForward = false <br><br>
+ 
+[tcpout:indexer_nodes]<br>
+server = 35.223.142.110:9997,34.125.215.77:9997<br>
+
+</i></p> <br>
+<a href="assets/images/forward_searrch.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/forward_searrch.png" alt="" style="width: 600px;"></a><br>
+
+				<p>Restart the splunk and list forward server<br><i>#/opt/splunk/bin/splunk restart<br>
+#/opt/splunk/bin/splunk list forward-server<br>
+</i></p> <br>
+<a href="assets/images/foward_restart.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/foward_restart.png" alt="" style="width: 600px;"></a><br>
+<p>Above has to display indexer list</p>
+</section><!--//section-->
 		
 			    <footer class="footer">
 				    <div class="container text-center py-5">
