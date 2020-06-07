@@ -245,7 +245,17 @@ Choose the caption<br>
 <a href="assets/images/verify_deployer.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/verify_deployer.png" alt="" style="width: 600px;"></a><br>
 
 					</section><!--//section-->
-  
+			
+					<section class="docs-section" id="item-3-4">
+						<h2 class="section-heading">Add indexer peer into Search head cluster</h2>
+						<p>Pre-work on all search head <br>Add [raft_statemachine] stanza in server.conf on all the search head members and <b>restart the splunk.<b><br></p> <br>
+<a href="assets/images/search_head.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/search_head.png" alt="" style="width: 600px;"></a><br>
+<p>Add indexer into Search head cluster <br>On search head member management URL, Goto => Distributed search => Enable => new Peer.<br></p> <br>
+<a href="assets/images/add_indexer.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/add_indexer.png" alt="" style="width: 600px;"></a><br>
+<p>Adding on a single search head member will reflect on other members too.</p> <br>
+<a href="assets/images/search_peer.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/search_peer.png" alt="" style="width: 600px;"></a><br>
+					</section><!--//section-->
+   </article><!--//docs-article-->
 		
 			    <footer class="footer">
 				    <div class="container text-center py-5">
