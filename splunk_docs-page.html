@@ -219,9 +219,39 @@ Once machine image create, it will display under machine image.
 
 					<section class="docs-section" id="item-3-2">
 						<h2 class="section-heading">Configure the Search head</h2>
-						<p>Init the members<br>Init the search head member to group a cluster<br></p>
+						<p>Init the members<br>Init the search head member to group a cluster<br><br>
+<i>
+Run the below statement on respective node:<br>
+Search head1<br>
+/opt/splunk/bin/splunk init shcluster-config <br>
+-auth admin:password <br>
+-mgmt_uri https://35.239.106.78:8089 <br>
+-replication_port 9000 <br>
+-replication_factor 3 <br>
+-conf_deploy_fetch_url http://34.125.135.119:8089 <br>
+-shcluster_label cluster_1<br>
+Search head2<br>
+/opt/splunk/bin/splunk init shcluster-config <br>
+-auth admin:password <br>
+-mgmt_uri https://35.202.13.236:8089 <br>
+-replication_port 9000 <br>
+-replication_factor 3 <br>
+-conf_deploy_fetch_url http://34.125.135.119:8089 <br>
+-shcluster_label cluster_1<br>
+Search head3<br>
+/opt/splunk/bin/splunk init shcluster-config <br>
+-auth admin:password <br>
+-mgmt_uri https://34.71.182.190:8089 <br>
+-replication_port 9000 <br>
+-replication_factor 3 <br>
+-conf_deploy_fetch_url http://34.125.135.119:8089 <br>
+-shcluster_label cluster_1<br>
 
-<a href="assets/images/head_member.png" data-title="download_splunk" data-toggle="lightbox"><img class="figure-img img-fluid shadow rounded" src="assets/images/head_member.png" alt="" st.yle="width: 600px;"></a><br>
+
+</i>
+
+</p>
+
 <p>Update the password in search head: <br>Update the password in the $SPLUNK_HOME/etc/system/local/server.conf else you will get the below error:<br>
 Error while deploying apps to first member: <br>ConfDeploymentException: Error while fetching apps baseline on target=http://<cluster_captain>:8089: <b>Network-layer error: Connection reset by peer</b><br><br>
 <i>/opt/splunk/bin/splunk start </i><br>
